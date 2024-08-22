@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ederson</title>
+
+    <!--Definindo o estilo da página com o CCS interno:-->
+    <style>
+        body {
+            margin: 0px;
+            background-color: #E1DCD1
+            
+        }
+
+        /* Diagrmação da página utilizando a funcionalidade de Grid Layout*/           
+        .container {
+            display: grid;
+            
+        }
+
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #726F6A;
+            font-style: italic;
+            font-family:Georgia;
+            letter-spacing: 4px;
+            word-spacing: 15px;
+            
+
+        }
+
+        .menu {
+            grid-column-start: 6;
+            grid-column-end: 10;
+            justify-content:center;
+            font-size: 120%;           
+            
+        }                
+
+        
+        .principal {
+            grid-column-start: 1;
+            grid-column-end: 8;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            padding-top: 50px;
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-bottom: 150px;
+            text-align: justify;
+            font-size: 120%;  
+            line-height: 150%;
+
+        }
+
+                       
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #DCDAD4;
+            text-align: center;           
+            
+        }
+        
+         /*Estilo de lista sem marcação*/    
+        ul {
+            list-style-type: none;            
+        }
+
+        a,
+        a:link {
+            text-decoration: none;
+            padding: 8px 16 px;
+            border: solid #DCDAD4 15px;
+            
+        }
+
+        /* Colocando os elementos da lista lado a lado*/
+        li {
+            float: left;
+           
+        }
+
+        /*Colocando o efeito ao passar o mouse sobre o link*/
+        a:hover {
+            background-color: #5C4D1F;
+            color:white;
+        }
+
+        
+        /* media query para dispositivos móveis - tornando o site responsivo para as telas destes dispositivos*/
+        @media only screen and (max-width: 950px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+            .menu {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 1;             
+                grid-row-end: 1;
+                font-size: 75%;
+                padding-left: 0px;
+                padding-right: 5px;
+                justify-content: left;
+                font-weight: bolder;
+
+            }
+
+            a,
+            a:link {
+                text-decoration: none;
+                border: solid #DCDAD4 3px;     
+                                    
+            }
+
+            .principal {
+                grid-column-start: 1;
+                grid-row-start: 1;
+                grid-column-end: 1;             
+                grid-row-end: 1;
+                padding-top: 5px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 1px;
+                text-align: justify;
+                font-size: 110%;  
+                line-height: 110%;                
+            }            
+
+        }
+
+    </style>
+
+</head>
+
+<!-- Construindo o cabeçaho da página-->
+<body>
+    <header class = "container">
+        <h1 style = "color: white; text-align: center;"> EDERSON BECKER</h1>
+        <br>
+        
+    </header>
+
+    <!-- Construindo o menu da página-->
+    <nav class = "container menu">
+        <ul>
+            <li><a href="index.html">SOBRE MIM</a></li>
+            <li><a href="formacao.html">FORMAÇÃO</a></li>
+            <li><a href="portfolio.html">PORTFÓLIO</a></li>
+            <li><a href="contato.html">CONTATO</a></li>
+        </ul>
+
+    </nav>
+        
+        <section class="principal">
+            <h1>
+               Entre em contato:
+            </h1>
+            <p><strong>e-mail:</strong><font color="#4C07F5"> ederbecker.eb@gmail.com </font>  <br>
+            </p>
+            <p>Ou preencha o formulário abaixo:</p> <br>
+
+            <!--Construindo Formulário-->
+            <form>
+                <table>
+                    <tr>
+                        <th><label for="nome">Nome:</label></th>
+                        <td><input type="text" name=""nome"></td> 
+                    </tr>
+                    <tr>
+                        <th><label for="email">E-mail:</label></th>
+                        <td><input type="email" name="email"></td> 
+                    </tr>
+                    <tr>
+                        <th><label for="msg"> Digite sua mensagem:</label></th>
+                        <td><textarea name="msg" rows="7" cols="30">Digite sua mensagem</textarea></td>
+                    </tr>
+                    <tr>
+                       <td></td>
+                        <td><button>Enviar</button></td>
+                    </tr>
+
+                </table>
+                
+            </form>
+        </section>
+       
+    </div>
+
+
+    <hr color="#5C4D1F" size="1px">
+
+    <footer class="container">
+        <p> Desenvolvido por Ederson Becker<br>RU: 2409374 - UNINTER </P>            
+    </footer>
+
+    
+</body>
+</html>
